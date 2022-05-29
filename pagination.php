@@ -1,5 +1,18 @@
 <?php
 
+$page = 1;
+    $limit = 8;
+    $offset = 0;
+    if (isset($_GET['page'])) {
+      $page = intval($_GET['page'])+1;
+      $prev = intval($_GET['page'])-1;
+
+      $offset = ($offset+$limit)*intval($_GET['page']);
+
+
+  // echo $limit.'|'.$offset;
+    }
+
 $total = count($DB->get_records_sql($query));
     $query .= " GROUP BY mdc.id LIMIT $limit OFFSET $offset";
     $getcourse = $DB->get_records_sql($query);
