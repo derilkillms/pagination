@@ -1,5 +1,28 @@
 <?php
 
+// SELECT MAX(id) AS id
+// ,(array_agg(assignedby))[1] AS assignedby
+// ,(array_agg(duration))[1] AS duration
+// ,missiontype
+// ,(array_agg(description))[1] AS description
+// ,(array_agg(indicator1))[1] AS indicator1
+// ,(array_agg(indicator2))[1] AS indicator2
+// ,(array_agg(indicator3))[1] AS indicator3
+// ,(array_agg(duedate))[1] AS duedate
+// ,(array_agg(reward))[1] AS reward
+// ,(array_agg(userassigned))[1] AS userassigned
+// ,(array_agg(levelmission))[1] AS levelmission
+// ,(array_agg(allemployee))[1] AS allemployee
+// ,(array_agg(nrp))[1] AS nrp
+// ,(array_agg(nrppersarea))[1] AS nrppersarea
+// ,(array_agg(persarea))[1] AS persarea
+// ,(array_agg(perssubarea))[1] AS perssubarea
+// ,(array_agg(approvalstatus))[1] AS approvalstatus
+// ,(array_agg(competencygroup))[1] AS competencygroup
+// ,(array_agg(competencyname))[1] AS competencyname
+// ,(array_agg(timecreated))[1] AS timecreated
+// FROM {local_custommission} GROUP BY missiontype
+
 $page = 1;
     $limit = 8;
     $offset = 0;
