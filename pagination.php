@@ -60,6 +60,9 @@ $total = count($DB->get_records_sql($query));
     }
 
     for ($i=$page-1; $i <$limitpage ; $i++) { 
+      if($i>($total/8)){
+        continue;
+      }
       if ($page-1==$i) {
         echo '<li class="page-item active">
         <a class="page-link" href="?page='.$i.'">'.($i+1).'<span class="sr-only">(current)</span></a>
